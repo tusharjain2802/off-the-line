@@ -1,6 +1,19 @@
-var screenWidth = 1280;
-var screenHeight = 720;
+var screenWidth = window.innerWidth;
+var screenHeight = window.innerHeight;
 var screenScale = 1.0;
+
+// FULL HEIGHT AND WIDTH ON ANY MODE
+// screenWidth = window.outerWidth;
+// screenHeight = window.outerHeight;
+
+// MOBILE DEVICES ONLY
+// if (window.innerHeight > window.innerWidth) {
+//   screenHeight = 1280;
+//   screenWidth = 720;
+// } else {
+//   screenWidth = window.innerWidth;
+//   screenHeight = window.innerHeight;
+// }
 
 var aw = new Aw(screenWidth, screenHeight, screenScale, []);
 aw.state = init;
@@ -31,7 +44,7 @@ function init(deltaTime) {
     text: "CLICK TO PLAY",
     x: screenWidth * 0.5,
     y: screenHeight * 0.5,
-    fontSize: 20,
+    fontSize: 40,
     fontStyle: "bold",
     color: "#08F",
     textAlign: "center",
